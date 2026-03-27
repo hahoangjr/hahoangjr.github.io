@@ -1,15 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Haden Nguyen Resume</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Haden Nguyen | Resume</title>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #1d4ed8;
+      --accent-dark: #1e40af;
+      --border: #e5e7eb;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #eef3ff 0%, var(--bg) 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 36px 20px 60px;
+    }
+
+    .hero {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 36px 32px;
+      margin-bottom: 24px;
+    }
+
+    .name {
+      margin: 0 0 8px;
+      font-size: 2.2rem;
+      line-height: 1.15;
+    }
+
+    .subtitle {
+      margin: 0 0 14px;
+      font-size: 1.05rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .summary {
+      margin: 0 0 22px;
+      max-width: 760px;
+      color: #374151;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.2s ease;
+      border: 1px solid var(--accent);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-dark);
+      border-color: var(--accent-dark);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--accent);
+    }
+
+    .btn-secondary:hover {
+      background: #eff6ff;
+    }
+
+    .contact {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 24px;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 1.2rem;
+      color: #111827;
+    }
+
+    .card ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .card li {
+      margin-bottom: 10px;
+    }
+
+    .experience-item {
+      margin-bottom: 18px;
+    }
+
+    .experience-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .role {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .org {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-top: 26px;
+    }
+
+    @media (max-width: 780px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 28px 22px;
+      }
+
+      .name {
+        font-size: 1.85rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Haden Nguyen</h1>
-  <p><a href="Haden_Nguyen_Resume.pdf" target="_blank">View Resume (PDF)</a></p>
-  <p><a href="Haden_Nguyen_Resume.pdf" download>Download Resume</a></p>
-  <p><a href="https://www.linkedin.com/in/haden-nguyen">LinkedIn</a></p>
-  <p><a href="PASTE_YOUR_GOOGLE_SCHOLAR_LINK_HERE">Google Scholar</a></p>
+  <div class="container">
+    <section class="hero">
+      <h1 class="name">Ha (Haden) H. Nguyen</h1>
+      <p class="subtitle">Computational Mechanics | FEM | Elastodynamics | Scientific Computing</p>
+      <p class="summary">
+        M.S. candidate in Civil Engineering with experience in computational mechanics,
+        elastodynamics, finite element methods, scientific computing, aerospace structural design,
+        and machine-learning-based surrogate modeling. Background includes high-performance FEM
+        development, wave-propagation modeling, and verification-driven simulation workflows.
+      </p>
+
+      <div class="links">
+        <a class="btn btn-primary" href="YOUR_RESUME_FILE.pdf" target="_blank">View Resume</a>
+        <a class="btn btn-secondary" href="YOUR_RESUME_FILE.pdf" download>Download Resume</a>
+        <a class="btn btn-secondary" href="https://www.linkedin.com/in/haden-nguyen" target="_blank">LinkedIn</a>
+        <a class="btn btn-secondary" href="YOUR_GOOGLE_SCHOLAR_LINK" target="_blank">Google Scholar</a>
+      </div>
+
+      <div class="contact">
+        Boulder, CO | [Phone Number] |
+        <a href="mailto:hoangha.nguyen@colorado.edu">hoangha.nguyen@colorado.edu</a>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Technical Skills</h2>
+        <ul>
+          <li><strong>Programming:</strong> Python, Mathematica, MATLAB, C++, Fortran</li>
+          <li><strong>Simulation:</strong> Abaqus, FEMAP Nastran, ANSYS, HyperMesh</li>
+          <li><strong>CAD:</strong> Inventor, SolidWorks, CATIA, AutoCAD</li>
+          <li><strong>Research Areas:</strong> FEM, elastodynamics, wave propagation, Green's functions, surrogate modeling</li>
+          <li><strong>ML Tools:</strong> Fourier Neural Operators, scientific ML workflows</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Education</h2>
+        <div class="experience-item">
+          <div class="role">University of Colorado Boulder</div>
+          <div class="org">M.S. in Civil Engineering | Aug 2023 – May 2026 (expected)</div>
+        </div>
+        <div class="experience-item">
+          <div class="role">Hanoi University of Science and Technology</div>
+          <div class="org">Engineer in Mechanical Engineering | Aug 2017 – Sep 2022</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Experience Highlights</h2>
+
+        <div class="experience-item">
+          <div class="role">Graduate Research Assistant</div>
+          <div class="org">University of Colorado Boulder | Aug 2023 – Present</div>
+          <div>
+            Developed computational mechanics workflows for elastodynamic Green’s functions,
+            Adaptive-Gradient FEM/BEM methods, and ML surrogate models for wave propagation.
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="role">Research Intern</div>
+          <div class="org">Los Alamos National Laboratory | Jun 2025 – Aug 2025</div>
+          <div>
+            Implemented and validated a Numba-accelerated Python FEM solver for static and dynamic
+            analysis using a novel Adaptive-Gradient finite element formulation.
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="role">Aerospace Structural Engineer</div>
+          <div class="org">Viettel Aerospace Institute | Oct 2022 – Jul 2023</div>
+          <div>
+            Designed aerospace parts and assemblies, generated technical drawings for manufacturing,
+            performed FEM analysis, and supported deformation and vibration testing.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Selected Publications</h2>
+        <ul>
+          <li>Adaptive-Gradient element formulation for classical rigid punch problems. <em>In preparation</em></li>
+          <li>Green’s function solution for transient wave propagation in a homogeneous half-space. <em>In preparation</em></li>
+          <li>Published work in <em>Thin-Walled Structures</em> and <em>Ocean Engineering</em></li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="footer">
+      © 2026 Haden Nguyen
+    </div>
+  </div>
 </body>
 </html>
